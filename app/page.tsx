@@ -267,7 +267,6 @@ export default function LandingPage() {
   <p className="text-xs text-white pr-18"> 
   &copy; {new Date().getFullYear()} VADET. All rights reserved.
 </p>
-
     <div className="flex gap-4">
       <Link href="#" className="text-sm text-white hover:underline">
         Terms of Service
