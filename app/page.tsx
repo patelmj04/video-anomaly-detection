@@ -78,35 +78,35 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Key Features</h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Our platform offers powerful tools to help you monitor and analyze video footage
                 </p>
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-800 p-6 shadow-lg">
+  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-900 p-6 shadow-lg transition-colors hover:bg-gray-300 dark:hover:bg-gray-900">
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
       <Eye className="h-6 w-6 text-primary" />
     </div>
-    <h3 className="text-xl font-bold">Anomaly Detection</h3>
+    <h3 className="text-xl font-bold text-black">Anomaly Detection</h3>
     <p className="text-center text-muted-foreground">
       Automatically identify unusual activities and behaviors in video footage using advanced AI algorithms.
     </p>
   </div>
-  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-800 p-6 shadow-lg">
+  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-800 p-6 shadow-lg transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
       <Bell className="h-6 w-6 text-primary" />
     </div>
-    <h3 className="text-xl font-bold">Real-time Alerts</h3>
+    <h3 className="text-xl font-bold text-black">Real-time Alerts</h3>
     <p className="text-center text-muted-foreground">
       Receive instant notifications when suspicious activities are detected, allowing for immediate response.
     </p>
   </div>
-  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-800 p-6 shadow-lg">
+  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-800 p-6 shadow-lg transition-colors hover:bg-gray-200 dark:hover:bg-gray-700">
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
       <BarChart3 className="h-6 w-6 text-primary" />
     </div>
-    <h3 className="text-xl font-bold">Event Analytics</h3>
+    <h3 className="text-xl font-bold text-black">Event Analytics</h3>
     <p className="text-center text-muted-foreground">
       Gain valuable insights with comprehensive analytics and reports on detected events and patterns.
     </p>
@@ -121,7 +121,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">How It Works</h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Our platform makes video analysis simple and effective
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function LandingPage() {
                   1
                 </div>
                 <h3 className="text-xl font-bold">Upload</h3>
-                <p className="text-center text-muted-foreground">
+                <p className="text-center text-white">
                   Upload your video footage through our secure platform.
                 </p>
               </div>
@@ -141,7 +141,7 @@ export default function LandingPage() {
                   2
                 </div>
                 <h3 className="text-xl font-bold">Analyze</h3>
-                <p className="text-center text-muted-foreground">
+                <p className="text-center text-white">
                   Our AI algorithms analyze the footage to detect anomalies and track events.
                 </p>
               </div>
@@ -150,7 +150,7 @@ export default function LandingPage() {
                   3
                 </div>
                 <h3 className="text-xl font-bold">Monitor</h3>
-                <p className="text-center text-muted-foreground">
+                <p className="text-center text-white">
                   Review results, receive alerts, and gain insights through our dashboard.
                 </p>
               </div>
@@ -163,7 +163,7 @@ export default function LandingPage() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Get Started?</h2>
-                <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[700px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Join thousands of organizations using our platform to enhance their video surveillance
                 </p>
               </div>
