@@ -53,7 +53,7 @@ export default function LandingPage() {
                     </Button>
                   </Link>
                   <Link href="#demo">
-                    <Button variant="outline" className="w-full min-[400px]:w-auto">
+                    <Button variant="outline" className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white">
                       Watch Demo
                     </Button>
                   </Link>
@@ -169,12 +169,12 @@ export default function LandingPage() {
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Link href="/signup">
-                  <Button size="lg" className="w-full min-[400px]:w-auto">
+                  <Button variant="outline" size="lg" className="w-full min-[400px]:w-auto border-white text-black hover:bg-black hover:text-white">
                     Sign Up Now
                   </Button>
                 </Link>
                 <Link href="/contact">
-                <Button variant="outline" size="lg" className="w-full min-[400px]:w-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
+                <Button variant="outline" size="lg" className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white">
                   Contact Sales
                 </Button>
 
