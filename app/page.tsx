@@ -1,22 +1,11 @@
-import { useRef } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Eye, Bell, BarChart3 } from "lucide-react";
+import Link from "next/link"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Eye, Bell, BarChart3 } from "lucide-react"
 
 export default function LandingPage() {
-  const videoRef = useRef(null);
-
-  const handlePlayVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.play(); // Start playing the video
-      videoRef.current.muted = false; // Unmute the video (optional)
-    }
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-600 to-blue-900 text-white">
-      {/* Header Section */}
       <header className="border-b border-indigo-700/50 bg-black/20 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
@@ -30,7 +19,7 @@ export default function LandingPage() {
             <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
               How It Works
             </Link>
-            <Link href="#demo" className="text-sm font-medium hover:underline underline-offset-4">
+            <Link href="#Demo" className="text-sm font-medium hover:underline underline-offset-4">
               Demo
             </Link>
           </nav>
@@ -44,20 +33,17 @@ export default function LandingPage() {
           </div>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
-              
-              {/* Text Content */}
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Advance Video Anomaly Detection & Event Tracking
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Detect unusual activities, track events, and receive real-time alerts with our AI-powered video analysis platform.
+                  Detect unusual activities, track events, and receive real-time alerts with our AI-powered video
+                  analysis platform.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/signup">
@@ -66,29 +52,22 @@ export default function LandingPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  <Button 
-                    variant="outline" 
-                    className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white"
-                    onClick={handlePlayVideo} // Start video on click
-                  >
-                    Watch Demo
-                  </Button>
+                  <Link href="#demo">
+                    <Button variant="outline" className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white">
+                      Watch Demo
+                    </Button>
+                  </Link>
                 </div>
               </div>
-
-              {/* Video Container */}
-              <div id="demo" className="relative aspect-video overflow-hidden rounded-xl shadow-[10px_20px_30px_rgba(0,0,0,0.3)] hover:shadow-[10px_25px_40px_rgba(0,0,0,0.5)] transition-shadow duration-300">
-                <video 
-                  ref={videoRef} 
-                  src="/videoplayback.mp4" 
-                  loop 
-                  autoPlay
-                  muted 
-                  className="object-cover w-full h-full"
-                  onMouseEnter={(e) => e.target.play()} // Play on hover
-                  onClick={(e) => e.target.play()} // Play on click
-                />
-              </div>
+              <div className="relative flex justify-left items-center aspect-video overflow-hidden rounded-xl shadow-[10px_20px_30px_rgba(0.9,0.9,0.9,0.6)]">
+              <video 
+                src="/videoplayback.mp4" 
+                loop 
+                autoPlay
+                muted 
+                className="object-cover w-full h-full"
+              />
+            </div>
 
               {/* <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
@@ -216,88 +195,91 @@ export default function LandingPage() {
         </section>
       </main>
       <footer className="border-t border-indigo-700/50 bg-black/20 backdrop-blur-sm">
-        <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-8 md:py-12">
-          <div className="flex flex-col gap-2 md:gap-4 lg:flex-1">
-            <div className="flex items-center gap-2">
-              <Eye className="h-5 w-5" />
-              <span className="text-lg font-bold">VideoGuard</span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Advanced video anomaly detection and event tracking platform.
-            </p>
-          </div>
-          <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium">Product</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link href="#features" className="text-sm text-muted-foreground hover:underline">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#pricing" className="text-sm text-muted-foreground hover:underline">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#demo" className="text-sm text-muted-foreground hover:underline">
-                    Demo
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium">Company</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link href="/about" className="text-sm text-muted-foreground hover:underline">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-sm text-muted-foreground hover:underline">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="text-sm text-muted-foreground hover:underline">
-                    Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium">Legal</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link href="/terms" className="text-sm text-muted-foreground hover:underline">
-                    Terms
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy" className="text-sm text-muted-foreground hover:underline">
-                    Privacy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="container flex flex-col items-center justify-between gap-4 border-t py-6 md:h-16 md:flex-row md:py-0">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} VideoGuard. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-sm text-muted-foreground hover:underline">
-              Terms of Service
+  <div className="container flex flex-col gap-4 py-10 md:flex-row md:gap-8 md:py-12">
+  <div className="flex flex-col gap-2 md:gap-4 lg:flex-1 pl-8">
+  <div className="flex items-center gap-2">
+    <Eye className="h-5 w-5 text-white" />
+    <span className="text-lg font-bold text-white">VADET</span>
+  </div>
+  <p className="text-sm text-white">
+    Advanced video anomaly detection and event tracking platform.
+  </p>
+  </div>
+    <div className="grid flex-1 grid-cols-2 gap-8 sm:grid-cols-3">
+      <div className="flex flex-col gap-2">
+        <h3 className="text-sm font-medium text-white">Product</h3>
+        <ul className="flex flex-col gap-2">
+          <li>
+            <Link href="#features" className="text-sm text-white hover:underline">
+              Features
             </Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:underline">
-              Privacy Policy
+          </li>
+          <li>
+            <Link href="#pricing" className="text-sm text-white hover:underline">
+              Pricing
             </Link>
-          </div>
-        </div>
-      </footer>
+          </li>
+          <li>
+            <Link href="#demo" className="text-sm text-white hover:underline">
+              Demo
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-sm font-medium text-white">Company</h3>
+        <ul className="flex flex-col gap-2">
+          <li>
+            <Link href="/about" className="text-sm text-white hover:underline">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="text-sm text-white hover:underline">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog" className="text-sm text-white hover:underline">
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className="flex flex-col gap-2">
+        <h3 className="text-sm font-medium text-white">Legal</h3>
+        <ul className="flex flex-col gap-2">
+          <li>
+            <Link href="/terms" className="text-sm text-white hover:underline">
+              Terms
+            </Link>
+          </li>
+          <li>
+            <Link href="/privacy" className="text-sm text-white hover:underline">
+              Privacy
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div className="container flex flex-col items-center justify-between gap-4 border-t py-6 md:h-16 md:flex-row md:py-0">
+  <p className="text-xs text-white pr-18"> 
+  &copy; {new Date().getFullYear()} VADET. All rights reserved.
+</p>
+
+    <div className="flex gap-4">
+      <Link href="#" className="text-sm text-white hover:underline">
+        Terms of Service
+      </Link>
+      <Link href="#" className="text-sm text-white hover:underline">
+        Privacy Policy
+      </Link>
+    </div>
+  </div>
+</footer>
+
+
     </div>
   )
 }
