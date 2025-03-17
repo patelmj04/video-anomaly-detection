@@ -174,9 +174,10 @@ export default function LandingPage() {
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button variant="outline" size="lg" className="w-full min-[400px]:w-auto">
-                    Contact Sales
-                  </Button>
+                <Button variant="outline" size="lg" className="w-full min-[400px]:w-auto border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white">
+                  Contact Sales
+                </Button>
+
                 </Link>
               </div>
             </div>
