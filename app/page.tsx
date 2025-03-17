@@ -1,11 +1,22 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Eye, Bell, BarChart3 } from "lucide-react"
+import { useRef } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Eye, Bell, BarChart3 } from "lucide-react";
 
 export default function LandingPage() {
+  const videoRef = useRef(null);
+
+  const handlePlayVideo = () => {
+    if (videoRef.current) {
+      videoRef.current.play(); // Start playing the video
+      videoRef.current.muted = false; // Unmute the video (optional)
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-600 to-blue-900 text-white">
+      {/* Header Section */}
       <header className="border-b border-indigo-700/50 bg-black/20 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
@@ -19,7 +30,7 @@ export default function LandingPage() {
             <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
               How It Works
             </Link>
-            <Link href="#Demo" className="text-sm font-medium hover:underline underline-offset-4">
+            <Link href="#demo" className="text-sm font-medium hover:underline underline-offset-4">
               Demo
             </Link>
           </nav>
@@ -33,17 +44,20 @@ export default function LandingPage() {
           </div>
         </div>
       </header>
+
+      {/* Main Content */}
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
+              
+              {/* Text Content */}
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Advance Video Anomaly Detection & Event Tracking
                 </h1>
                 <p className="max-w-[600px] text-white md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Detect unusual activities, track events, and receive real-time alerts with our AI-powered video
-                  analysis platform.
+                  Detect unusual activities, track events, and receive real-time alerts with our AI-powered video analysis platform.
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/signup">
@@ -52,24 +66,29 @@ export default function LandingPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
-                  <Link href="#demo">
-                    <Button variant="outline" className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white">
-                      Watch Demo
-                    </Button>
-                  </Link>
+                  <Button 
+                    variant="outline" 
+                    className="w-full min-[400px]:w-auto border-white text-blue-500 hover:bg-blue-500 hover:text-white"
+                    onClick={handlePlayVideo} // Start video on click
+                  >
+                    Watch Demo
+                  </Button>
                 </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-xl shadow-[10px_20px_30px_rgba(0,0,0,0.3)]">
-              <video 
-                src="/videoplayback.mp4" 
-                loop 
-                autoPlay
-                muted 
-                className="object-cover w-full h-full"
-              />
-            </div>
 
-
+              {/* Video Container */}
+              <div id="demo" className="relative aspect-video overflow-hidden rounded-xl shadow-[10px_20px_30px_rgba(0,0,0,0.3)] hover:shadow-[10px_25px_40px_rgba(0,0,0,0.5)] transition-shadow duration-300">
+                <video 
+                  ref={videoRef} 
+                  src="/videoplayback.mp4" 
+                  loop 
+                  autoPlay
+                  muted 
+                  className="object-cover w-full h-full"
+                  onMouseEnter={(e) => e.target.play()} // Play on hover
+                  onClick={(e) => e.target.play()} // Play on click
+                />
+              </div>
 
               {/* <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
