@@ -5,7 +5,7 @@ import { ArrowRight, Eye, Bell, BarChart3 } from "lucide-react"
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 text-white">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-600 to-blue-900 text-white">
       <header className="border-b border-indigo-700/50 bg-black/20 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2">
@@ -19,11 +19,11 @@ export default function LandingPage() {
             <Link href="#how-it-works" className="text-sm font-medium hover:underline underline-offset-4">
               How It Works
             </Link>
-            <Link href="#pricing" className="text-sm font-medium hover:underline underline-offset-4">
-              Pricing
+            <Link href="#Demo" className="text-sm font-medium hover:underline underline-offset-4">
+              Demo
             </Link>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-black">
             <Link href="/login">
               <Button variant="outline">Log In</Button>
             </Link>
@@ -59,7 +59,19 @@ export default function LandingPage() {
                   </Link>
                 </div>
               </div>
-              <div className="relative aspect-video overflow-hidden rounded-xl">
+              <div className="relative aspect-video overflow-hidden rounded-xl shadow-[10px_20px_30px_rgba(0,0,0,0.3)]">
+              <video 
+                src="/videoplayback.mp4" 
+                loop 
+                autoPlay
+                muted 
+                className="object-cover w-full h-full"
+              />
+            </div>
+
+
+
+              {/* <div className="relative aspect-video overflow-hidden rounded-xl">
                 <Image
                   src="/placeholder.svg?height=720&width=1280"
                   alt="Video surveillance dashboard"
@@ -68,7 +80,7 @@ export default function LandingPage() {
                   className="object-cover"
                   priority
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
