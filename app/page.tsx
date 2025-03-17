@@ -94,7 +94,7 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-900 p-6 shadow-lg transition-colors hover:bg-gray-300 dark:hover:bg-gray-900">
+  <div className="flex flex-col items-center space-y-4 rounded-lg border bg-gray-100 dark:bg-gray-900 p-6 shadow-lg transition-colors hover:bg-gray-200 dark:hover:bg-gray-900">
     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
       <Eye className="h-6 w-6 text-primary" />
     </div>
