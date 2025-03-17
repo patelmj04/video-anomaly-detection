@@ -264,8 +264,7 @@ export default function LandingPage() {
     </div>
   </div>
   <div className="container flex flex-col items-center justify-between gap-4 border-t py-6 md:h-16 md:flex-row md:py-0">
-  <p className="text-xs text-white pr-18">
-     
+  <p className="text-xs text-white pr-18"> 
   &copy; {new Date().getFullYear()} VADET. All rights reserved.
 </p>
 
