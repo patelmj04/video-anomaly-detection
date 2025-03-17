@@ -47,7 +47,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href="/signup">
-                    <Button className="w-full min-[400px]:w-auto">
+                    <Button className="w-full min-[400px]:w-auto border-white text-white hover:bg-white hover:text-black">
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
